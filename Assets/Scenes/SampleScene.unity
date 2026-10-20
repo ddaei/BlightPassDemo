@@ -407,6 +407,7 @@ MonoBehaviour:
   csvFileName: pass_rewards
   title: "\u300C\uC9D1\uD589\uAD00 \uC815\uC2DD \uC784\uBA85\u300D \uD328\uC2A4"
   fontSize: 25
+  premiumOnly: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

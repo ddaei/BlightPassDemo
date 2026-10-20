@@ -11,7 +11,7 @@ public class PassRewardLoader : MonoBehaviour
     public string csvFileName = "pass_rewards";          // Resources 폴더 안 CSV 이름 (.csv는 빼고)
     public string title = "「집행관 정식 임명」 패스";      // 화면 맨 위 제목
     public int fontSize = 22;                            // 글자 크기
-
+    public bool premiumOnly = false;                     // 체크하면 프리미엄 보상만 보여줌
     // ===== 보상 한 줄을 담는 상자 =====
     class Reward
     {
@@ -121,9 +121,16 @@ public class PassRewardLoader : MonoBehaviour
 
         for (int lv = 1; lv <= maxLevel; lv++)
         {
-            GUILayout.Label("Lv." + lv
-                + "    일반: " + RewardText(lv, "일반")
-                + "    |    프리미엄: " + RewardText(lv, "프리미엄"));
+            if (premiumOnly)
+            {
+                GUILayout.Label("Lv." + lv + "    프리미엄: " + RewardText(lv, "프리미엄"));
+            }
+            else
+            {
+                GUILayout.Label("Lv." + lv
+                    + "    일반: " + RewardText(lv, "일반")
+                    + "    |    프리미엄: " + RewardText(lv, "프리미엄"));
+            }
         }
 
         GUILayout.EndScrollView();
