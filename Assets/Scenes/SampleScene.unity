@@ -391,8 +391,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassRewardLoader
   csvFileName: pass_rewards
   title: "\u300C\uC9D1\uD589\uAD00 \uC815\uC2DD \uC784\uBA85\u300D \uD328\uC2A4"
-  fontSize: 22
-  premiumOnly: 0
+  fontSize: 26
+  premiumOnly: 1
 --- !u!4 &1900188471
 Transform:
   m_ObjectHideFlags: 0
